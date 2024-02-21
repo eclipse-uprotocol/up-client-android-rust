@@ -1,0 +1,22 @@
+rust_library {
+    name: "libmystubiulistener",
+    srcs: ["service_stub/my_stub_iulistener.rs"],
+    crate_name: "mystubiulistener",
+    rustlibs: [
+        "libparcelable_stubs",
+        "org.eclipse.uprotocol.core.ubus.iulistener-rust",
+        "libbinder_rs",
+    ],
+}
+
+rust_library {
+    name: "libmystubiubus",
+    srcs: ["service_stub/my_stub_iubus.rs"],
+    crate_name: "mystubiubus",
+    rustlibs: [
+        "libparcelable_stubs",
+        "org.eclipse.uprotocol.core.ubus.iulistener-rust",
+        "org.eclipse.uprotocol.core.ubus.iubus-rust",
+        "libbinder_rs",
+    ],
+}

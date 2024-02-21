@@ -1,0 +1,52 @@
+# Copyright (c) 2024 General Motors GTO LLC
+#
+#  Licensed to the Apache Software Foundation (ASF) under one
+#  or more contributor license agreements.  See the NOTICE file
+#  distributed with this work for additional information
+#  regarding copyright ownership.  The ASF licenses this file
+#  to you under the Apache License, Version 2.0 (the
+#  "License"); you may not use this file except in compliance
+#  with the License.  You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing,
+#  software distributed under the License is distributed on an
+#  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#  KIND, either express or implied.  See the License for the
+#  specific language governing permissions and limitations
+#  under the License.
+#  SPDX-FileType: SOURCE
+#  SPDX-FileCopyrightText: 2023 General Motors GTO LLC
+#  SPDX-License-Identifier: Apache-2.0
+
+[workspace]
+resolver = "2"
+members = [
+    "aidl-rust-codegen",
+    "iulistener-example",
+    "iubus-iulistener-example",
+]
+
+[workspace.package]
+rust-version = "1.66.1"
+version = "0.1.5-SNAPSHOT" # uProtocol version
+repository = "//https://github.com/eclipse-uprotocol/up-client-android-rust"
+homepage = "https://github.com/eclipse-uprotocol"
+authors = [
+    "Pete LeVasseur <plevasseur@gmail.com>",
+]
+edition = "2021"
+keywords = ["uProtocol", "SDK"]
+license = "Apache-2.0"
+
+[workspace.dependencies]
+anyhow = "1.0.69"
+async-trait = "0.1.64"
+binder = { git = "https://github.com/PLeVasseur/binder_rs.git", branch = "main" }
+binder_tokio = { git = "https://github.com/PLeVasseur/binder_rs.git", branch = "main" }
+clap = { version = "4.1.7", features = ["derive"] }
+lazy_static = "1.4.0"
+protobuf = { version = "3.3" }
+tokio = { version = "1.25.0", features = ["full"] }
+up-rust = { git = "https://github.com/eclipse-uprotocol/up-rust", branch = "main" }
